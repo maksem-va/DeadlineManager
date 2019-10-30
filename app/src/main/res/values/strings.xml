@@ -12,4 +12,10 @@
     <string name="menu_tools">Settings</string>
     <string name="menu_share">Share</string>
     <string name="menu_send">Feedback</string>
+    <string name="DeadlineAdderHeader">Let\'s make new deadline:</string>
+    <string name="EventName">Event</string>
+    <string name="description">Description</string>
+    <string name="create">Create</string>
+    <string name="upcoming_deadline">Upcoming Deadline:</string>
+    <string name="AdderDescription">Description</string>
 </resources>
