@@ -37,9 +37,9 @@ class EventDbHelper extends SQLiteOpenHelper {
         String SQL_CREATE_GUESTS_TABLE = "CREATE TABLE " + EventData.DataEntry.TABLE_NAME + " ("
                 + EventData.DataEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                 + EventData.DataEntry.COLUMN_NAME + " TEXT NOT NULL, "
-                + EventData.DataEntry.COLUMN_CITY + " TEXT NOT NULL, "
-                + EventData.DataEntry.COLUMN_GENDER + " INTEGER NOT NULL DEFAULT 3, "
-                + EventData.DataEntry.COLUMN_AGE + " INTEGER NOT NULL DEFAULT 0);";
+                + EventData.DataEntry.COLUMN_DESCR + " TEXT NOT NULL, "
+                + EventData.DataEntry.COLUMN_PRIORITY + " INTEGER NOT NULL DEFAULT 2, "
+                + EventData.DataEntry.COLUMN_DATE + " INTEGER NOT NULL DEFAULT 0);";
 
         // Запускаем создание таблицы
         db.execSQL(SQL_CREATE_GUESTS_TABLE);
