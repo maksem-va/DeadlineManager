@@ -25,14 +25,14 @@
             android:paddingLeft="4dp">
 
             <EditText
-                android:id="@+id/edit_guest_name"
+                android:id="@+id/edit_name"
                 android:hint="Имя"
                 android:inputType="textCapWords"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content" />
 
             <EditText
-                android:id="@+id/edit_guest_city"
+                android:id="@+id/edit_description"
                 android:hint="Описание"
                 android:inputType="textCapWords"
                 android:layout_height="wrap_content"
@@ -41,7 +41,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/container_gender"
+        android:id="@+id/container_priority"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
@@ -58,7 +58,7 @@
             android:orientation="vertical">
 
             <Spinner
-                android:id="@+id/spinner_gender"
+                android:id="@+id/spinner_priority"
                 android:layout_width="wrap_content"
                 android:layout_height="48dp"
                 android:paddingRight="16dp"
@@ -67,7 +67,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/container_age"
+        android:id="@+id/container_date"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
@@ -84,7 +84,7 @@
             android:paddingLeft="4dp">
 
             <EditText
-                android:id="@+id/edit_guest_age"
+                android:id="@+id/edit_date"
                 android:hint="Дата"
                 android:inputType="number"
                 android:layout_height="wrap_content"
@@ -92,4 +92,10 @@
 
         </RelativeLayout>
     </LinearLayout>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Submit" />
 </LinearLayout>

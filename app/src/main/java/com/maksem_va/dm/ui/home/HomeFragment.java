@@ -1,9 +1,11 @@
 package com.maksem_va.dm.ui.home;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -12,9 +14,11 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
+import com.maksem_va.dm.EventMaker;
 import com.maksem_va.dm.R;
 
 public class HomeFragment extends Fragment {
+
 
     private HomeViewModel homeViewModel;
 
@@ -23,6 +27,7 @@ public class HomeFragment extends Fragment {
         homeViewModel =
                 ViewModelProviders.of(this).get(HomeViewModel.class);
         View root = inflater.inflate(R.layout.fragment_home, container, false);
+        Button button = root.findViewById(R.id.button);
         final TextView textView = root.findViewById(R.id.text_home);
         homeViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
@@ -30,6 +35,14 @@ public class HomeFragment extends Fragment {
                 textView.setText(s);
             }
         });
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), EventMaker.class);
+                startActivityForResult(intent, 0);
+            }
+        });
+
         return root;
     }
 }

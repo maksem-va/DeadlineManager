@@ -31,22 +31,22 @@ public class EventMaker extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.event_maker);
 
-        mNameEditText = (EditText) findViewById(R.id.edit_guest_name);
-        mDescEditText = (EditText) findViewById(R.id.edit_guest_city);
-        mDateEditText = (EditText) findViewById(R.id.edit_guest_age);
-        mPrioritySpinner = (Spinner) findViewById(R.id.spinner_gender);
+        mNameEditText = (EditText) findViewById(R.id.edit_name);
+        mDescEditText = (EditText) findViewById(R.id.edit_description);
+        mDateEditText = (EditText) findViewById(R.id.edit_date);
+        mPrioritySpinner = (Spinner) findViewById(R.id.spinner_priority);
 
         setupSpinner();
     }
 
     private void setupSpinner() {
 
-        ArrayAdapter genderSpinnerAdapter = ArrayAdapter.createFromResource(this,
-                R.array.gender_options, android.R.layout.simple_spinner_item);
+        ArrayAdapter prioritySpinnerAdapter = ArrayAdapter.createFromResource(this,
+                R.array.priority_options, android.R.layout.simple_spinner_item);
 
-        genderSpinnerAdapter.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
+        prioritySpinnerAdapter.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
 
-        mPrioritySpinner.setAdapter(genderSpinnerAdapter);
+        mPrioritySpinner.setAdapter(prioritySpinnerAdapter);
         mPrioritySpinner.setSelection(2);
 
         mPrioritySpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
